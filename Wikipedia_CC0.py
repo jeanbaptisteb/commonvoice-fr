@@ -14,7 +14,7 @@ If you want to add support for an additional language, you'll probably need:
     * to customize the Spacy imports and models
     * to customize the mapping_lang_template dictionary 
     * to add some customized text cleaning process
-    * to be a bit familiar with the structure of the Wikipedia version you're targetting (e.g. the concept of namespaces, revisions, etc.)
+    * to be a bit familiar with the structure of the Wikipedia version you're targetting (e.g. the concepts of Wikipedia namespaces, templates, reverts, revisions, redirections, etc.)
     * to do some extensive tests
     
 In short, the script currently does the following actions:
@@ -36,7 +36,7 @@ Current script limitations:
 Room for improvement:
     * The script takes a long time to execute; it's because to the Mediawiki API's limitations, but it might be improved with some code optimization.
     * Making the script avaible for other versions of Wikipedia.
-    * Improving the quality of collected sentences (correcting spelling mistakes, removing irrelevant sentences from Wikipedia maintenance templates and categories)
+    * Improving the quality of collected sentences (automatically correcting spelling mistakes, removing irrelevant sentences extracted from Wikipedia maintenance templates and categories)
     * using the script on contributors using a "public domain" template on their userpage.
     * Making the script incremental (e.g. making the script able to stop and relaunch where it stopped). When we retrieve some content by a user, if we relaunch the script later we shouldn't try to retrieve content previously retrieved.
     * Test and improve the "per user" option, to retrieve content from a specific user (see the --user option)
