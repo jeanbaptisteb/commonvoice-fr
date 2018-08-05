@@ -4,9 +4,11 @@ Created on Thu Aug  2 21:12:29 2018
 
 @author: Jean-Baptiste
 
-This script is intended to retrieve content published on Wikipedia under the Creative Commons Zero licence
+This script is intended to retrieve content published on Wikipedia under the Creative Commons Zero licence.
+
 Currently, it only supports the French and English Wikipedia versions. 
-It still requires a lot of improvements.
+
+It still requires a lot of improvement.
 
 If you want to add support for an additional language, you'll probably need:
     * to customize the Spacy imports and models
@@ -14,6 +16,31 @@ If you want to add support for an additional language, you'll probably need:
     * to add some customized text cleaning process
     * to be a bit familiar with the structure of the Wikipedia version you're targetting (e.g. the concept of namespaces, revisions, etc.)
     * to do some extensive tests
+    
+In short, the script currently does the following actions:
+    * it starts by retrieving the list of users using a "CC0" template on their personal Wikipedia page
+    * for each user, lists their contributions
+    * for each contribution, checks if it's not a derivative work (if it's not a "revert", a translation, or content mixed with another contributor's - in these cases, the content would probably not be under the CC0 licence)
+    * for each contribution, checks if the content is relevant or not (e.g. redirections, minor edits, etc.)
+    * for each contribution, tries to clean up the text a bit (converting numbers to text, etc.)
+    * then it writes each contribution to a file named after the contributor's username 
+
+Some examples of retrieved sentences: 
+    * https://gist.github.com/jeanbaptisteb/397fc00b9b9e010051d24d28a515caf6  
+    * https://gist.github.com/jeanbaptisteb/6b148f5707aac6bc938e93f2f7a53900
+    
+Current script limitations:
+    * Few Wikipedia contributors publish their content under the CC0 licence. The size of the retrieved content may be a bit disappointing. You generally can hope from a few dozens to a few hundreds sentences per contributor.
+    * It may takes hours (in some cases over 10 hours) depending on the number of contribution to check and retrieve, and the options used. 
+    
+Room for improvement:
+    * The script takes a long time to execute; it's because to the Mediawiki API's limitations, but it might be improved with some code optimization.
+    * Making the script avaible for other versions of Wikipedia.
+    * Improving the quality of collected sentences (correcting spelling mistakes, removing irrelevant sentences from Wikipedia maintenance templates and categories)
+    * using the script on contributors using a "public domain" template on their userpage.
+    * Making the script incremental (e.g. making the script able to stop and relaunch where it stopped). When we retrieve some content by a user, if we relaunch the script later we shouldn't try to retrieve content previously retrieved.
+    * Test and improve the "per user" option, to retrieve content from a specific user (see the --user option)
+    
 """
 
 import requests
