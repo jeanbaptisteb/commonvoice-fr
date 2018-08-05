@@ -23,7 +23,7 @@ In short, the script currently does the following actions:
     * for each contribution, checks if it's not a derivative work (if it's not a "revert", a translation, or content mixed with another contributor's - in these cases, the content would probably not be under the CC0 licence)
     * for each contribution, checks if the content is relevant or not (e.g. redirections, minor edits, etc.)
     * for each contribution, tries to clean up the text a bit (converting numbers to text, etc.)
-    * then it writes each contribution to a file named after the contributor's username 
+    * then it writes each sentence in a file named after the contributor's username 
 
 Some examples of retrieved sentences: 
     * https://gist.github.com/jeanbaptisteb/397fc00b9b9e010051d24d28a515caf6  
@@ -34,7 +34,7 @@ Current script limitations:
     * It may takes hours (in some cases over 10 hours) depending on the number of contribution to check and retrieve, and the options used. 
     
 Room for improvement:
-    * The script takes a long time to execute; it's because to the Mediawiki API's limitations, but it might be improved with some code optimization.
+    * The script takes a long time to execute; it's because of the Mediawiki API's limitations, but it might be improved with some code optimization.
     * Making the script avaible for other versions of Wikipedia.
     * Improving the quality of collected sentences (automatically correcting spelling mistakes, removing irrelevant sentences extracted from Wikipedia maintenance templates and categories)
     * using the script on contributors using a "public domain" template on their userpage.
