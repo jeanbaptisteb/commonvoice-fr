@@ -155,7 +155,7 @@ def getRomanNumbers(ch):
     #print('getRomanNumbers final', ch, "|||", ro)
     yield ch[ros-1], '', ro
 
-def filter_numbers(inp):
+def filter_numbers(inp, lang="fr"):
   finalinp = ''
 
   #print('filter_numbers', 'inp=', inp)
@@ -171,20 +171,20 @@ def filter_numbers(inp):
       ee = ''.join(e.split())
       if int(e) > 0:
         #print('filter_numbers', 'INT:BEFORE', 'ee=', ee, 'newinp=', newinp)
-        newinp = num2words(int(ee), lang='fr')
+        newinp = num2words(int(ee), lang=lang)
         #print('filter_numbers', 'INT:AFTER', 'ee=', ee, 'newinp=', newinp)
     except ValueError:
       try:
         ee = ''.join(e.replace(',', '.').split())
         if float(ee):
           #print('filter_numbers', 'FLOAT:BEFORE', 'ee=', ee, 'newinp=', newinp)
-          newinp = num2words(float(ee), lang='fr')
+          newinp = num2words(float(ee), lang=lang)
           #print('filter_numbers', 'FLOAT:AFTER', 'ee=', ee, 'newinp=', newinp)
       except ValueError:
         matches = ORDINAL_REGEX.match(e)
         #print('filter_numbers', 'ORDINAL', 'e=', e, matches)
         if matches:
-          newinp = num2words(int(matches.group(1)), ordinal=True, lang='fr')
+          newinp = num2words(int(matches.group(1)), ordinal=True, lang=lang)
 
     finalinp += newinp
 
