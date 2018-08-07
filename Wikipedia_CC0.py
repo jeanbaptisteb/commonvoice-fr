@@ -363,7 +363,7 @@ for user, licence in CC0_user_list:
                             for template_name in translation_templates:
                                 if "{{"+template_name in discussion_content:
                                     translation = True
-                                    translation[discussion_page_title] = True
+                                    translations[discussion_page_title] = True
                                     print("Translation from", contrib["title"], "excluded")
                         #not "else" here, because the discusion page may be inexistant
                 if translations[discussion_page_title] == True:
