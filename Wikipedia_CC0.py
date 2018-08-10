@@ -288,10 +288,16 @@ def get_added_content(url, revid, lang):
     if "compare" not in response.keys():
         return None
     revid_size = response["compare"]["tosize"]
+
+        
     if "prev" in response["compare"].keys(): #If there are previous revisions, we need to check if the current revision isn't a derivative work (i.e. a revert)
         #Check if it's a revert
         rvcontinue = None
         revid_size = 0
+        current_size = response["compare"]["tosize"]
+        previous_size = response["compare"]["fromsize"]
+        if previous_size > current_size:
+            return None
         while True:
             #Let's compare the current and previous revisions of the page
             pr_query = {"action":"query", "prop":"revisions", 

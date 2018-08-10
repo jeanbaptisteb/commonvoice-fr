@@ -14,6 +14,8 @@ from nltk.collocations import TrigramCollocationFinder
 from nltk.collocations import TrigramAssocMeasures
 import textwrap
 import language_check
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 mapping_normalization = [
   #[ u'\xa0 ', u' ' ],
