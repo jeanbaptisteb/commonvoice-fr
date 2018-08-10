@@ -1,0 +1,362 @@
+Des événements inconnus ont voulu que ce buste disparaisse. 
+C'est aussi possible pour certains changements simultanés des entrées. 
+Un aléa est une transition non désirée sur un fil. 
+D'autres méthodes de synthèse existent, basées elles sur une description du comportement du circuit. 
+Certains processeurs possèdent un circuit spécialisé capable de prédire l'adresse de retour d'une fonction. 
+Le nombre de ces registres est limité. 
+La limite actuelle tourne autour de huit ou seize. 
+Cette unité détermine les branchements à effectuer, et donc les instructions à charger. 
+Cependant, les multiplieurs sont en pratique plus lents et imposants que les additionneurs. 
+Le but du pipeline logiciel est d'intercaler un travail utile entre les deux. 
+Le pipelining est une technique utilisée par les compilateurs pour optimiser l'exécution des boucles. 
+Il est possible ensuite d'appliquer d'autres optimisations au code après duplication. 
+Dans ces modèles, des instructions de synchronisation permettent d'appliquer temporairement une cohérence plus forte. 
+En cohérence faible, les accès peuvent être ou non synchronisés. 
+Les accès non synchronisés n'imposent pas de contraintes particulières. 
+Lorsque ce modèle est associé à la cohérence PRAM, on parle de cohérence processeur. 
+Cohérence dans les systèmes multiprocesseurs Dans les systèmes multiprocesseurs, les modèles de cohérence varient. 
+Soit A une donnée. 
+Elle peut être lue et modifiée via plusieurs copies {Cun, Cdeux,... 
+Cn}. Supposons que Cun soit modifiée en Cun'. 
+De très nombreux modèles de cohérence sont possibles, et nous n'en présenterons qu'une partie. 
+On peut notamment citer l'existence d'accès mémoires en stride et en scatter-gather. 
+Ce n'est pas une obligation : certains bancs de registres n'ont qu'un seul port. 
+Cet autre modèle relâche à nouveau ces contraintes, en introduisant la notion de causalité. 
+Des modifications indépendantes peuvent être vues dans un ordre différent. 
+Ce modèle de cohérence est le plus fort qui soit. 
+C'est le comportement de la mémoire de threads issus d'un même processus. 
+Le POWERhuit devrait être introduit en deux mille treize. 
+Il n’est plus au centre mais est toujours présent physiquement. 
+Le conte est alors l'art du conteur. 
+Les personnages jouent des rôles bien définis et leurs aventures se terminent généralement bien. 
+L'histoire racontée permet de dégager une leçon de vie, ou morale. 
+Souvent, la légende s'apparente au mythe, car elle tente d'expliquer un phénomène naturel. 
+À la différence du mythe, la légende ne repose pas sur les divinités. 
+Un nouvel art du spectacle ? 
+Le conte littéraire est alors un récit court, dans lequel les actions sont racontées. 
+Pour une  poétique du conte : en réponse aux interprétations psychanalytiques et formalistes''. 
+Québec  Amérique, Coll. « En Question ». 
+Paris : Maison de la Parole, mille neuf cent quatre-vingt-dix-neuf-. 
+Le SMT est le partage d'un cœur de processeur superscalaire entre plusieurs threads. 
+Le but est d'améliorer l'utilisation des ressources. 
+Autrement dit la quantité : est indépendante du repère dans lequel on l'évalue. 
+Mais séparément, l'énergie et l'impulsion en dépendent. 
+On appellera plus loin verrous les bascules asynchrones, et bascules les bascules synchrones. 
+Comme l'état précédent et la mémorisation interviennent, on parle de logique séquentielle. 
+Il sert de hub pour les compagnies Icelandair et Iceland Express. 
+Islande compte en tout quatre-vingt-dix-huit aéroports, certains de taille très modeste. 
+Cependant il ne nourrissait aucune illusion sur les vertus des hommes. 
+Voir aussi Crépuscule des idoles,, §deux., et d'une honnêteté pratique et intellectuelle complète. 
+La déforestation est ancienne. 
+Elle a commencé selon Williams Williams, M., deux mille. 
+Dark ages and dark areas: global deforestation in the deep past. 
+Ce mythe est complètement faux. 
+Les Incertitudes de l'identité, l'Harmattan, deux mille six, p. cent vingt-neuf. 
+L'épisode wallon féconda durablement son imagination et sa création. 
+C'était alors la période « rhénane » dont ses recueils portent la trace. 
+Mais en mille neuf cent cinq, elle partit pour l'Amérique. 
+À cette même époque, il commença de vivre de sa plume. 
+Ces disparitions ne furent pas d’abord rendues publiques. 
+Mais les bavardages autour de l'affaire du tableau eurent le dernier mot. 
+La comtesse était divorcée et menait une vie très libre. 
+Guillaume Apollinaire s'éprit d'elle et la courtisa d'abord en vain. 
+Rapidement, Guillaume dut partir au front. 
+Le    , il fit la connaissance de Madeleine Pagès dans un train. 
+Il se fiança à Madeleine en. 
+Évacué à Paris, il fut trépané le. 
+C'est pour cette raison que des systèmes à mémoire distribuée sont apparus. 
+Le processeur d'Intel, le Xeon, utilise cette technique. 
+Et tous les ensembles processeur + mémoire sont reliés par un système de communication. 
+C'est un modèle d'ordinateur très complexe à programmer. 
+Certains supercalculateurs d'IBM, de SGI et Cray disposent de cette fonction. 
+Quant aux premières œuvres plastiques, elles poursuivent les inventions du cubisme. 
+Le mot « dada » est d'ailleurs un mot choisi au hasard dans le dictionnaire. 
+Le groupe n'est certes plus, mais « l'idée » surréaliste perdure aujourd'hui encore. »« Manifeste du surréalisme »,. 
+C'est pour cette raison que des systèmes à mémoire distribuée sont apparus. 
+Il est consommé blanc, vieilli en fût ou épicé. 
+Il prend alors une coloration ambrée plus ou moins foncée. 
+En fonction de la matière première utilisée, il peut être appelé agricole ou industriel. 
+La première greffe de moelle osseuse a eu lieu en mille neuf cent soixante-huit. 
+Le daguerréotype est un procédé uniquement positif ne permettant aucune reproduction de l'image. 
+Il est constitué d'une plaque, généralement en cuivre, recouverte d'une couche d'argent. 
+Psyché, princesse de la [[mythologie  grecque]], élevée au rang de déesse. 
+IJKL est un parallélogramme. 
+Cette conception est proche du démembrement de la propriété plus moderne qu'est l'usufruit. 
+L'usufruitier pourrait être ainsi assimilé au tenancier, et le nue-propriétaire au concédant. 
+Le nom « Appalaches » désigne plusieurs régions associées à la chaîne de montagne. 
+Les mêmes motifs se retrouvent pour le Soudan du Sud. 
+On parle alors d'architecture NUMA. 
+La pantomime est un spectacle typiquement romain, ballet à sujet mythologique, souvent tragique. 
+L'acteur portait un beau costume de soie et un masque coloré. 
+De forme allongée, les masques tragiques traduisaient émotion et violence. 
+Quant aux premières œuvres plastiques, elles poursuivent les inventions du cubisme. 
+Le mot « dada » est d'ailleurs un mot choisi au hasard dans le dictionnaire. 
+Le groupe n'est certes plus, mais « l'idée » surréaliste perdure aujourd'hui encore. »« Manifeste du surréalisme »,. 
+C'est lui qui rétablit la discipline dans l'armée et crée les compagnies d'ordonnance. 
+On assemble des troupes bretonnes à Rennes. 
+La campagne de Normandie s'engage. 
+Des objectifs sont fixés. 
+Dunois commande l'armée française, armée qui s'emploie à Rouen. 
+Début septembre, les Bretons quittent Dol et s'avancent vers le Mont-Saint-Michel. 
+Coutances et Saint-Lô sont emportées. 
+Désormais la reconqûete de la Normandie ne saurait s'arrêter. 
+Rejoint par le roi, les Bretons assiègent Caen. 
+C'est lui qui rétablit la discipline dans l'armée et crée les compagnies d'ordonnance. 
+Les Romains ont utilisé plusieurs types de fibres différents. 
+La soie, importée de Chine était également connue. 
+L'architecture appelée Systolic array est un type d'architecture MISD. 
+Elles cherchent ainsi à représenter un stade intermédiaire entre les processeurs superscalaires et VLIW. 
+Truman est réélu pour un second mandat en novembre mille neuf cent quarante-huit. 
+À la suite de cette campagne il devient capitaine. 
+Le quinze cm schweres Infanteriegeschütz trente-trois était monté au milieu de ce compartiment blindé. 
+Puis ils sont fusillés. 
+La poudrière du Luxembourg saute. 
+L'état de siège a été décrété et Paris divisé en quatre secteurs militaires. 
+Ils peuvent perquisitionner dans les maisons, les parcs et même les catacombes. 
+Puis ils sont fusillés. 
+Maurice Papon est nommé préfet à Paris en mille neuf cent cinquante-huit. 
+La puissance étant le quotient de l'énergie par le temps. 
+Au cours de son adolescence, elle est devenue adepte du mouvement Born-again Christian . 
+Malgré la signature de la Magna Carta, Fitzwalter conservait son contrôle sur Londres. 
+Durant la guerre, la garnison de la tour rejoignit les barons. 
+La guerre continua entre les deux factions et Fitzwalter soutenait Louis. 
+Dans presque toutes les cités de l'Empire, on vit à l'heure romaine. 
+Selon certaines estimations Rome, la capitale compte plus d'un million d'habitants sous le Haut-Empire. 
+Les Romains l'appellent tout simplement l'urbs, la ville. 
+Elle est avec Alexandrie, la plus grande ville du monde romain. 
+Depuis le, la ville a été beaucoup embellie par les empereurs. 
+Ces nombreux monuments symbolisent la grandeur de Rome et l'art de vivre de Romains. 
+La colline du Palatin est occupée par les palais impériaux, la maison des Augustes. 
+Mais Rome est avant tout dans l'imagination populaire, la ville des jeux. 
+Les thermes apparaissent à la fin de la République. 
+Les empereurs en construisent de nombreux pour les loisirs de la plèbe romaine. 
+La ville a grandi au cours des siècles de manière désordonnée. 
+Les rues sont étroites et sinueuses. 
+Le chiffre six cent soixante-six est alors repris par des journaux divers. 
+Un seul décompte permettrait d'arriver à ce chiffre. 
+Ce décompte a toutefois le défaut d'être assez tiré par les cheveux. 
+L'hiver, il chasse également de jour quand les rongeurs sont en activité. 
+Quand il chasse de petits rongeurs, il emploie une technique bien particulière appelée mulotage. 
+Seuls un saut sur cinq est couronné de succès. 
+Pour ses autres proies, il utilise la technique de chasse à l'affût. 
+Cette technique est très aléatoire et le taux de réussite est faible. 
+S'il parvient à attraper un oiseau, il le plume soigneusement. 
+Il peut ainsi attraper deux virgule cinq lombrics à la minute. 
+Il creuse également de petits trous coniques pour déterrer certains du sol. 
+La chasse au renard en France est réglementée. 
+Elle peut se pratiquer au fusil, au piège ou à courre. 
+Le Renard roux peut également être déterré. 
+Le Renard roux étant classé nuisible, cette pratique est autorisée toute l'année en France. 
+Deux ou quatre phases ? 
+Les protocoles à deux et à quatre phases ont chacun leurs avantages. 
+De fait, les deux protocoles ont été utilisés pour le codage données-groupées. 
+On obtient ainsi des structures plus complexes, mais potentiellement plus performantes. 
+Par conséquent, on cherche à la minimiser pour des circuits à basse consommation. 
+Quel que soit le matériau utilisé, ces fragments sont appelés des tesselles. 
+La fréquence d'horloge ne permet donc de comparer que des processeurs de conception proche. 
+En Angleterre, cette défaite provoque une grave crise dans la marine et le gouvernement. 
+L''''horloge d'un composant électronique, qui  rythme son fonctionnement. 
+Chaque auxiliaire peut se conjuguer pour former d'autres temps composés, voire des temps surcomposés. 
+Ce modèle est aussi utilisé pour la conception de portes complexes. 
+Exemples : SPARC, POWER et PowerPC, MIPS, ARM. 
+Parmi les propriétés des circuits, beaucoup dépendent des techniques de fabrication utilisées. 
+Des techniques communes d'optimisation et de réduction de la consommation sont aussi utilisables. 
+C'est le chef-lieu du département de Maine-et-Loire dans la région Pays de la Loire. 
+Ses habitants s'appellent les Angevins. 
+À l'origine, ces filtres étaient réalisés en cordiérite. 
+Bernard Vinot, op. cit... 
+Il est de retour dans la capitale le onze messidor. 
+Un fanfariste : un musicien d'une fanfare. 
+Par conséquent, on cherche à la minimiser pour des circuits à basse consommation. 
+Michel Eyquem de MontaigneIl faudrait normalement prononcer [], mais aujourd'hui on prononce généralement []. 
+Il s'est engagé, a mené une action publique, a risqué sa vie. 
+Michel de Montaigne est issu d'une famille de riches négociants bordelais, les Eyquem. 
+Il participe aux campagnes d'Italie. 
+Sa roture est définitivement éteinte. 
+Ils abandonneront le nom de Louppes pour celui de Villeneuve, comme Montaigne celui d'Eyquem. 
+Il sera l'aîné de sept frères et sœurs. 
+Il semble qu'il ait eu des rapports tendus avec elle. 
+La figure de Rousseau joua en l'occurrence un rôle essentiel dans l'œuvre du poète. 
+Il en existe de différentes formes et de différents goûts. 
+Les chips peuvent être de différentes épaisseurs, gaufrés et/ou calibrés. 
+Le nom vient de l'anglais chipCNRTL Entrée en ligne. 
+Les Belges, eux, utilisent généralement ce nom au masculin. 
+Comme le droit d'auteur, le copyright ne protège pas les  simples idées. 
+Le titulaire du copyright peut être l'auteur, le producteur ou  l'éditeur de l'œuvre. 
+Seuls Chypre, l'Irlande, Malte et le Royaume-Uni font application du copyright. 
+It's a Seductive Mirage, site GNU. 
+La collection bouge dans le but de rentabiliser la fondation Guggenheim,. 
+Certains informaticiens considèrent que tout programme complexe est  localement trivial. 
+Edmond Rostand naît en mille huit cent soixante-huit dans une famille aisée de Marseille. 
+Des chercheurs de Sun Microsystems, Intel et IBM prennent aussi part à cet engouement. 
+Vie et sciences économiques, soixante-douze-quatre-vingt-onze. 
+Benkeltoum, Nordine, 'Gérer et comprendre l'open source', Paris    Presses des Mines. 
+Prendre une capture à une taille « normale ». 
+Elle pullule au printemps, mais perdure pour partie en automne et même en hiver. 
+L'aridité est marquée dans le sud, directement atteint par le sirocco. 
+Le centre et le sud sont composés de collines. 
+Il existe de rares plaines, notamment la plaine de Catane et la Conca d'Oro. 
+Le réseau hydrographique est constitué de petits fleuves et de cours d'eaux pérennes. 
+En électronique numérique, les circuits peuvent être ou statiques ou dynamiques. 
+Toutefois, bien que plus rapides, ils sont aussi moins fiables. 
+Il apparaît bien vite comme une nécessité de faire classer le site. 
+Mahomet et les prophètes de l'islam, dont Abraham, Moïse et Jésus. 
+Épervine : Épervine est une ville nordique située au Sud de la   province. 
+Elle ne possède pas d'écuries. 
+Épervine aussi est sa propre châtellerie. 
+Fort-Ivar fait parti de la Bréche. 
+Helgen, qui est le premier village que le joueur découvre. 
+C'est le  seul village qui comporte une muraille en pierre avec des tours. 
+Il fait partie de la Crevasse. 
+Rivebois, le deuxième village que le joueur découvre. 
+Il est bordé  d'une rive nommée rivière blanche. 
+Il fait partie de la chatellerie de Blancherive. 
+Il fait partie de la chatellerie de Blancherive. 
+D'autres méthodes de synthèse existent, basées elles sur une description du comportement du circuit. 
+Elles permettent d'obtenir des circuits efficaces, mais la conception se trouve compliquée. 
+On a alors sept empereurs, une heptarchie, qui ressemble davantage à l'anarchie militaire du. 
+La puissance de feu d'un cuirassé démontrée par l’USS Iowa. 
+C’est aussi l’une des premières langues de plusieurs pays frontaliers. 
+Afin d'éteindre l'incendie, Brioukhanov appelle simplement les pompiers. 
+Cependant, les matières nucléaires ne peuvent être éteintes avec de l'eau. 
+Les pompiers, gravement irradiés, sont évacués et mourront pour la plupart. 
+Depuis, le château est la propriété d'une fondation privée. 
+Parmi les langages utilisés, beaucoup sont dérivés du langage CSP, comme CHP et Occam. 
+Certains, mais pas tous, ont été développés spécifiquement pour la conception de circuits asynchrones. 
+On obtient ainsi des structures plus complexes, mais potentiellement plus performantes. 
+Bien sûr, tous les autres codages m parmi n sont possibles, mais peu usités. 
+Enfin, certains circuits combinent différents protocoles pour profiter des avantages de chacun. 
+A contrario, les microprocesseurs asynchrones les plus performants ont utilisé des protocoles multi-rails. 
+De tels pipelines à grains fins donnent plus de souplesse. 
+Deux ou quatre phases ? 
+Les protocoles à deux et à quatre phases ont chacun leurs avantages. 
+De fait, les deux protocoles ont été utilisés pour le codage données-groupées. 
+C'est la naissance du Groupe Crédit Coopératif. 
+Parmi les langages utilisés, beaucoup sont dérivés du langage CSP, comme CHP et Occam. 
+Certains, mais pas tous, ont été développés spécifiquement pour la conception de circuits asynchrones. 
+Elles illustrent l’histoire humaine de ses débuts à aujourd’hui. 
+Ces premiers circuits reposent sur un protocole double-rail trois états. 
+De nouveaux sont proposés, comme MOUSETRAP. 
+L'investiture du nouveau président a lieu un mois plus tard, en janvier. 
+Voir, mais présente certains risques. 
+C'est un modèle de conception largement utilisé. 
+Des protocoles plus complexes sont aussi utilisés. 
+Pour un codage sur plusieurs rails, une implémentation est donnée dans cet article :. 
+Ceux-ci représenteraient les multiples facettes d'Arlequin. 
+Le codage double-rail sont très utilisés. 
+Les principes surréalistes se retrouvent en Scandinavie et en URSS. 
+Le « poétisme » tchèque peut être considéré comme une première phase du surréalisme. 
+Parmi les poètes peuvent être cités Katsue Kitazono, Masato Tomobe, Kazuki Tomokawa... 
+Le surréalisme japonais ne s'inscrit pas dans la continuité du dadaïsme. 
+D'autres matériaux pouvaient servir de supports pour des inscriptions cunéiformes. 
+Le règne d'Ur-Nammu est le mieux documenté. 
+Les bas-reliefs restant témoignent néanmoins d'une grande finesse d'exécution. 
+Ce type d'objet est courant sous le règne de Shulgi. 
+Ulysse est un des héros les plus célèbres de la mythologie grecque. 
+C'était l'un des principaux ports de la méditéranée occidentale. 
+La promotion cent un porte son nom. 
+La promotion deux cent trois porte son nom. 
+Avec Ron, elle aide Harry à franchir les obstacles pour trouver la Pierre Philosophale. 
+Le prix Albert Londres a été décerné à Marie-Monique Robin pour ce documentaire. 
+Le film Le monde selon Monsanto raconte l’histoire de la firme de Saint-Louis. 
+Traduit dans quinze langues, le film et le livre connaissent un succès international. 
+La densité de la neige fraîchement tombée est très variable. 
+Grand Central Publishing, deux mille onze. 
+On peut aussi, pour de nombreux circuits, utiliser plusieurs portes C plus petites. 
+On pourra se reporter à la bibliographie pour une comparaison de certaines implémentations. 
+Leur pays a formé depuis l'Anjou à qui ils ont donné leur nom. 
+L'implémentation à partir de quatre portes Non-ET. 
+Et cependant il ne doutait pas que cette Vérité existât quelque part. 
+Chez les Hervé-Bazin, en fait, le Pâtis s'est transmis par sa grand-mère. 
+D'autres implémentations existent. 
+Qu'en est-il exactement ? 
+Des protocoles plus complexes sont aussi utilisés pour obtenir de meilleures performances. 
+Un multiplieur est un circuit électronique destiné à effectuer une multiplication. 
+On appelle de tels circuits des multiplieurs. 
+Ce signal est le « signal d'horloge ». 
+Il prend souvent la forme d'une onde carrée périodique. 
+Architecture et jeu d'instruction L'architecture ARM est fortement inspirée des principes de conception RISC. 
+Elle dispose de seize registres généraux de trente-deux bits. 
+Les instructions, codées sur trente-deux bits, peuvent toutes disposer d'exécution conditionnelle. 
+Ces deux philosophies de conception cohabitent. 
+Les instructions sont de taille fixe, souvent trente-deux bits. 
+Les instructions prennent alors pour opérandes les premiers éléments de la pile. 
+Le langage Forth est souvent utilisé pour programmer ce type de processeur. 
+Typiquement, l'une d'elles peut-être réservée pour retenir les adresses de retour des fonctions. 
+Les premiers processeurs à pile conservaient celle-ci en mémoire. 
+Les premiers ordinateurs étaient séquentiels, exécutant les instructions l'une après l'autre. 
+On parle d'architectures SISD. 
+L'architecture appelée Systolic array est un type d'architecture MISD. 
+La loi de Gustafson est assez analogue. 
+Le parallélisme, au départ, concerne uniquement le fait d'exécuter des calculs en parallèle. 
+Un tel parallélisme de tâche correspond à une architecture MIMD. 
+En Anglais, on parle de TLP. 
+Des processus différents peuvent s'exécuter sur des processeurs différents. 
+Il peut par exemple utiliser un verrou d'exclusion mutuelle. 
+Il va s'agir de paralléliser les tâches entre différents threads. 
+Il fournit aussi des primitives simples de synchronisation et de passage de messages. 
+Les microprocesseurs séquentiels exécutent l'instruction suivante lorsqu'ils ont terminé la première. 
+Cette file d'exécution s'appelle un pipeline. 
+Les processeurs de ce types sont appelés superscalaires. 
+Intel Pentium est le premier des processeurs superscalaires pour compatible PC. 
+Pour augmenter encore les possibilités de parallélisation, certains processeurs utilisent le renommage de registres. 
+Les registres qui sont utilisés plusieurs fois introduisent en effet des dépendances entre instructions. 
+Ainsi, certaines dépendances peuvent être éliminées, permettant au processeur d'exécuter plus d'instructions en parallèle. 
+Le compilateur doit alors optimiser lui-même le code. 
+L'architecture EPIC utilise le même principe. 
+Ce système peut être vu comme une étape entre le SMP et le clustering. 
+C'est le problème de la cohérence de la mémoire. 
+Selon les architectures, la cohérence de la mémoire peut être plus ou moins forte. 
+Ces différents mécanismes permettent une coopération efficace entre les processeurs. 
+On parle alors de processeurs multicœurs. 
+Certaines de ces applications sont facilement parallélisables, comme les calculs graphiques. 
+On compte des coprocesseurs arithmétiques, graphiques et des coprocesseurs spécialisés dans le chiffrement. 
+Il permet d'implémenter des verrous. 
+Modern Processor Design: Fundamentals of Superscalar Processors. 
+McGraw-Hill Professional. p. cinq cent soixante et un. 
+Plusieurs formes de parallélismes sont exploitables dans les systèmes informatiques. 
+Load-link charge une valeur depuis une adresse mémoire donnée. 
+L'expression catch fire est strictement métaphorique. 
+SISD est l'une des quatre grandes classes d'architectures définies par la Taxinomie de Flynn. 
+On marque ces entrées avec un symbole + ou -, sans marquer les entrées communes. 
+Un des problèmes récurrents pour les horloges est la variation de leur période. 
+On parle alors de circuit asynchrone. 
+Inversement, on parle de circuits synchrones pour ceux utilisant un unique signal d'horloge. 
+Le caractère modulaire des circuits asynchrones permet de les combiner facilement. 
+Par exemple l'oxyde d'uranium comporte onze virgule huit cinqpourcent d'oxygène. 
+On parle de protocole à quatre phases, de “full-handshake” ou de codage RZ. 
+La réponse se fait via un troisième. 
+Ils permettent donc de bonnes implémentations en temps moyen de calcul. 
+Il s'agit d'un protocole à quatre phases. 
+Cependant, il est possible d'utiliser ceux-ci pour dessiner des circuits asynchrones. 
+Les circuits asynchrones ne sont actifs que lorsque des données sont disponibles. 
+En effet, il ne forme pas un tronc ligneux. 
+Le pseudo-tronc est en réalité formé par les pétioles des feuilles. 
+Ceux-ci se recouvrent partiellement et constituent une structure portante, un « faux tronc ». 
+Les feuilles peuvent atteindre de long et de large. 
+La tige du bananier est très courte et entièrement souterraine. 
+Elle apparaît sur un rhizome, qui produit régulièrement de nouvelles tiges. 
+C'est une méthode de conception largement utilisée pour des processeurs asynchrones. 
+Cependant, les deux hypothèses sont en fait très proches en terme de conséquences. 
+On appellera plus loin verrous les bascules asynchrones, et bascules les bascules synchrones. 
+Types de bascules et de verrous Verrous et bascules sont en fait très proches. 
+On ne citera pas alors la bascule ainsi créée, d'implémentation plus complexe. 
+La porte C est une porte utilisée en logique séquentielle. 
+Cette propriété la rend intéressante pour la réalisation de circuits asynchrones. 
+Elle a été introduite par David E. Muller. 
+À la place, ceux-ci communiquent en indiquant quand des données sont disponibles. 
+Les circuits asynchrones regroupent en fait plusieurs classes de circuit ayant des propriétés différentes. 
+À l'heure actuelle ils restent peu utilisés. 
+Ils intéressent énormément pour ce dernier point les industriels concevant des systèmes embarqués autonomes. 
+AMULET est un processeur exécutant le jeu d'instructions ARMonsieur Sa particularité est d'être asynchrone. 
+Il est développé par l'école d'informatique de l'université de Manchester. 
+Les processeurs AMULET sont basés sur la technique des micropipelines. 
+La fin des travaux était prévue pour deux mille douze. 
+Les instructions prennent alors pour opérandes les premiers éléments de la pile. 
+Typiquement, l'une d'elles peut-être réservée pour retenir les adresses de retour des fonctions. 
+Les premiers processeurs à pile conservaient celle-ci en mémoire. 
+Une implémentation sous forme de liste chaînée est également possible pour des programmes. 
+La dispersion intermodale est alors inexistante. 
+Cette dernière méthode a l'avantage de permettre la réutilisation des réseaux pré-existants. 
+Désormais, le pont est réservé aux piétons et aux cyclistes. 
+BE est le cinq album du groupe suédois Pain of salvation. 

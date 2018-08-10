@@ -12,6 +12,8 @@ from nltk.collocations import BigramCollocationFinder
 from nltk.collocations import BigramAssocMeasures
 from nltk.collocations import TrigramCollocationFinder
 from nltk.collocations import TrigramAssocMeasures
+import textwrap
+import language_check
 
 mapping_normalization = [
   #[ u'\xa0 ', u' ' ],
@@ -261,15 +263,20 @@ def extract_sentences(arr, min_words, max_words, nlp=None):
   if nlp == None: #if no nlp object were passed, we use basic sentence splitting      
     raw_sentences = (full_text).split('. ')
   else: 
-      #if we pass a nlp object, we use the Spacy library. See example in libretheatre.py
-    doc = nlp(full_text, disable=["ner", "parser"])  
-    #Retrieve a list of common nouns, pronouns, and expressions in the doc. We'll use them to spot stage directions
-    most_common_expressions = common_nouns(doc) + common_collocations(full_text)
-    #Retrieve a sentence list, removing stage directions (see maybe_clean_stage_directions function )
-    raw_sentences = [maybe_clean_stage_directions(sent, most_common_expressions) for sent in doc.sents]
-    #maybe_clean_stage_directions function returns "None" when a stage direction is spotted, so we have to remove None items from the list
-    raw_sentences = [sentence for sentence in raw_sentences if sentence != None]
-  return filter(lambda x: len(splitIntoWords(x)) >= min_words and len(splitIntoWords(x)) <= max_words, raw_sentences)
+    #if we pass a nlp object, we use the Spacy library. See example in libretheatre.py
+    #There's a 1000000 character limit in Spacy NER parser, so we need to avoid passing a too long text
+    text_list = textwrap.wrap(full_text, 999999, break_long_words=False)
+    all_sentences = []
+    for chunk in text_list:
+        doc = nlp(chunk, disable=["ner", "parser"])  
+        #Retrieve a list of common nouns, pronouns, and expressions in the doc. We'll use them to spot stage directions
+        most_common_expressions = common_nouns(doc) + common_collocations(chunk)
+        #Retrieve a sentence list, removing stage directions (see maybe_clean_stage_directions function )
+        raw_sentences = [maybe_clean_stage_directions(sent, most_common_expressions) for sent in doc.sents]
+        #maybe_clean_stage_directions function returns "None" when a stage direction is spotted, so we have to remove None items from the list
+        raw_sentences = [sentence for sentence in raw_sentences if sentence != None]
+        all_sentences += raw_sentences
+  return filter(lambda x: len(splitIntoWords(x)) >= min_words and len(splitIntoWords(x)) <= max_words, all_sentences) #raw_sentences)
 
 def check_output_dir(output):
   if not os.path.isdir(output):
@@ -352,3 +359,14 @@ def set_custom_boundaries(doc):
     elif token.text in ['.', '!', '?', "...", "…"]: 
       doc[token.i+1].is_sent_start = True    
   return doc
+
+def correct_sentence(text, lang_code):
+    tool = language_check.LanguageTool(lang_code)    
+    while True:
+        matches = tool.check(text)
+        #can't use automatic correction if there's no suggestion
+        matches = [match for match in matches if match.ruleId != "HUNSPELL_NO_SUGGEST_RULE"]
+        if len(matches) == 0:
+            break        
+        text = language_check.correct(text, matches)   
+    return text

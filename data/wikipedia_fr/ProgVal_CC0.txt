@@ -1,0 +1,47 @@
+En Italie, on l'appelle salame piccante. 
+Elle est donc incluse dans IncrementalPolynomial. 
+Enregistrement : un élément d’un fichier ou   d’une base de données. 
+L’enregistrement contient habituellement plusieurs informations qui se rapportent au même objet. 
+Les quatre Gems incluent Grenat, Améthyste, Perle et Steven. 
+Pour vérifier la seconde propriété, on doit utiliser la propriété d’auto-réductibilité de SAT. 
+Ainsi, on peut tester dans si est un circuit valide pour résoudre SAT. 
+Ainsi, des circuits constructibles efficacement pour SAT impliquent un effondrement plus fort, P = NP. 
+L’hypothèse du théorème de Karp—Lipton, que ces circuits existent, est plus faible. 
+Une preuve que de telle circuits n’existent pas impliquerait que P ≠ NP. 
+Représentation générale d’un protocole de preuves interactives. 
+On parle alors d’« effondrement de la hiérarchie polynomiale au niveau ». 
+En particulier, si, alors, c’est-à-dire : la hiérarchie polynomiale s’effondre au niveau un. 
+On ne pense donc par que la hiérarchie polynomiale s’effondre au niveau un. 
+Un protocole qui calcule est une décomposition d'étapes. 
+Un protocole se représente généralement sous la forme d'un arbre. 
+Un exemple est donné ci-dessous. 
+On suppose que l’on a un automate qui reconnait le langage. 
+On peut montrer que ce protocole est, mais. 
+On veut calculer, qui vaut un si et 0 sinon. 
+La complexité est à nouveau de. 
+En fait, compIP n’est même pas connu ou considéré comme contenant NP. 
+Cependant, un tel système peut résoudre certains problèmes que l’on pense être difficiles. 
+The Complexity of Decision versus Search. 
+Journal on Computing, Volume vingt-trois, No. un. 
+February mille neuf cent quatre-vingt-quatorze. 
+Nous résumons ici les plus connues. 
+Martin Furer, Oded Goldreich, Yishay Mansour, Michael Sipser, Stathis Zachos. 
+On Completeness and Soundness in Interactive Proof Systems. 
+Chang, B. Chor, Oded Goldreich, J. Hartmanis, J. Håstad, D. Ranjan, and P. Rohatgi. 
+The random oracle hypothesis is false. 
+Journal of Computer and System Sciences, quarante-neuf:vingt-quatre-trente-neuf. mille neuf cent quatre-vingt-quatorze. 
+LEs messages sont composés de qubits. 
+PSPACE has constant-round quantum interactive proof systems. 
+Proceedings of IEEE FOCS'quatre-vingt-dix-neuf, pp. cent douze-cent dix-neuf. mille neuf cent quatre-vingt-dix-neuf. 
+Kitaev and J. Watrous. 
+Parallelization, amplification, and exponential time simulation of quantum interactive proof systems. 
+Proceedings of ACM STOC'deux mille, pp. six cent huit-six cent dix-sept. deux mille. 
+Une des sources utilisées sont l'hydrogène. 
+Les bétàvoltaïques ont été inventées il y a plus de cinquante ans. 
+Cette augmentation est principalement due à l'augmentation de la surface du matériel de capure. 
+La principale utilisation de ces batteries est pour l'utilisation d'appareils portatifs. 
+On songe également à s'en servir pour des peacemaker. 
+Normalement, ces batteries ne devraient pas émettre d'onde ni de particule dangereuse. 
+Les bétàvoltiques souffrent de dommages internes dûs à l'énergie des électrons. 
+De plus, comme les émissions du matériel radioactif, elles diminuent doucement en activité. 
+En deux mille huit, elle a écrit son premier roman: Un mètre quatre 

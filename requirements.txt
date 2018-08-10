@@ -9,6 +9,8 @@ future==0.16.0
 Gutenberg==0.6.1
 idna==2.6
 isodate==0.6.0
+langid==1.1.6
+language_check==1.1
 lxml==4.2.3
 Mako==1.0.7
 Markdown==2.6.11

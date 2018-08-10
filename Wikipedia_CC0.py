@@ -35,12 +35,13 @@ Current script limitations:
     
 Room for improvement:
     * The script takes a long time to execute; it's because of the Mediawiki API's limitations, but it might be improved with some code optimization.
-    * Making the script avaible for other versions of Wikipedia.
+    * Code refactoring. There is probably some redundant code. Compare in particular the functions "get_article_texts" and  "get_added_content".
+    * Making the script avaible for other versions of Wikipedia. It requires that some contributors publish their content under CC0).
     * Improving the quality of collected sentences (automatically correcting spelling mistakes, removing irrelevant sentences extracted from Wikipedia maintenance templates and categories)
     * using the script on contributors using a "public domain" template on their userpage.
     * Making the script incremental (e.g. making the script able to stop and relaunch where it stopped). When we retrieve some content by a user, if we relaunch the script later we shouldn't try to retrieve content previously retrieved.
     * Test and improve the "per user" option, to retrieve content from a specific user (see the --user option)
-    
+    * Removing sentences that are not in the target language (for example, on the English Wikipedia, some quotes are cited in their original language -Italian, French, etc.). There are several python libraries doing that. Currently, the script uses "langid" for that, but maybe there are most efficient libraries.
 """
 
 import requests
@@ -48,11 +49,11 @@ import time
 import os
 import re
 from lxml import html
-from utils import filter_numbers, maybe_normalize, extract_sentences, check_output_dir, set_custom_boundaries
+from utils import filter_numbers, maybe_normalize, extract_sentences, check_output_dir, set_custom_boundaries, correct_sentence
 import spacy
-#import language_check #Wikipedia contributors sometimes make spelling mistakes!
 import pypandoc
 import argparse
+import langid
 
 parser = argparse.ArgumentParser(description='Wikipedia CC0 text content extraction for Common Voice')
 parser.add_argument('--min-words', type=int, default=3, help='Minimum number of words to accept a sentence')
@@ -86,7 +87,6 @@ except ModuleNotFoundError:
 
 nlp.add_pipe(set_custom_boundaries, before='parser') 
 #tool = language_check.LanguageTool('fr-FR') #TODO for later
-
 mapping_specific = [
   [ u'(', u''],
   [ u')', u''],
@@ -115,8 +115,57 @@ mapping_lang_template = {"fr":{"template_name":"Modèle:Utilisateur_CC0",
                          }
 #useful to check if the page is a translation
 translation_templates = ["traduit de", "traduit par", "Translated page"]
+#from https://github.com/rcompton/ryancompton.net/blob/master/assets/praw_drugs/urlmarker.py
+WEB_URL_REGEX = r"""(?i)\b((?:https?:(?:/{1,3}|[a-z0-9%])|[a-z0-9.\-]+[.](?:com|net|org|edu|gov|mil|aero|asia|biz|cat|coop|info|int|jobs|mobi|museum|name|post|pro|tel|travel|xxx|ac|ad|ae|af|ag|ai|al|am|an|ao|aq|ar|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|bi|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|cr|cs|cu|cv|cx|cy|cz|dd|de|dj|dk|dm|do|dz|ec|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gg|gh|gi|gl|gm|gn|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|Ja|sk|sl|sm|sn|so|sr|ss|st|su|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|yu|za|zm|zw)/)(?:[^\s()<>{}\[\]]+|\([^\s()]*?\([^\s()]+\)[^\s()]*?\)|\([^\s]+?\))+(?:\([^\s()]*?\([^\s()]+\)[^\s()]*?\)|\([^\s]+?\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’])|(?:(?<!@)[a-z0-9]+(?:[.\-][a-z0-9]+)*[.](?:com|net|org|edu|gov|mil|aero|asia|biz|cat|coop|info|int|jobs|mobi|museum|name|post|pro|tel|travel|xxx|ac|ad|ae|af|ag|ai|al|am|an|ao|aq|ar|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|bi|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|cr|cs|cu|cv|cx|cy|cz|dd|de|dj|dk|dm|do|dz|ec|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gg|gh|gi|gl|gm|gn|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|Ja|sk|sl|sm|sn|so|sr|ss|st|su|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|yu|za|zm|zw)\b/?(?!@)))"""
+
+def is_garbage(sentence, lang_code):
+    #To avoidspam on Common Voice
+    if len(re.findall(WEB_URL_REGEX,sentence)) > 0:
+        return True
+    #to check if the sentence is in the correct language
+    
+    #check if the sentence isn't an artifact from Wikipedia templates and other maintenance stuff
+    for garbage in ["Fichier:", "Image:", "File:", "Catégorie:", "|", "!!"]:
+        if garbage in sentence:
+            return True
+    return False
+
+
+
+
+
+def convert_abbreviations(text, lang_code):
+    measure_units = {"fr": {
+                        "mm": "millimètre",
+                        "°": "degré",
+                        "cm":"centimètre",
+                        "m.":"mètre",
+                        "km":"kilomètre",
+             
+                        }
+                    }
+    coordinate_units = {"fr": {"degree":"degré",
+                               "minute": "minute",
+                               "second": "seconde"
+                                }
+                        }
+    text = re.sub(r'([0-9]+) ?°([0-9]+) ?\'([0-9]+) ?\"', r"\1 {degree} \2 {minute} \3 {second}".format(degree=coordinate_units[lang_code]["degree"],minute=coordinate_units[lang_code]["minute"],second=coordinate_units[lang_code]["second"]), text)
+    text = re.sub(r'-(\d*\.\d+|\d+)', "moins \1", text)
+    #TODO: need to treat differently singular and plural. The only library doing that for a variety of languages is "pattern", which apparently is not compatible yet with Python 3 (but should soon)
+    for measure in measure_units[lang_code]:
+        #singular
+        text = re.sub(r'(\[0-1]\[,.]\d+|\[0-1]) ?{measure}'.format(measure=measure), r"\1 {full_name}".format(full_name=measure_units[lang_code][measure]), text)
+        #plural
+        text = re.sub(r'(\d*\[,.]\d+|\d+) ?{measure}'.format(measure=measure), r"\1 {full_name}".format(full_name=measure_units[lang_code][measure]), text)
+
+    return text
+
 
 def get_article_texts(lang, revid_list):
+    """Retrieves revisions specified in the "revid_lisst".
+    The "lang" parameter specifies the Wikipedia version, e.g. "fr"
+    To be used only with the first revision of articles originally created by the contributor.
+    """
     url = "https://{lang}.wikipedia.org/w/api.php".format(lang=lang)
     query = {"action":"parse",
              "format":"json"
@@ -166,8 +215,11 @@ def get_article_texts(lang, revid_list):
             text = filter_numbers(text, lang=lang)
             text = text.strip()
 #        text= " ".join([p.text_content().replace("\xa0", " ") for p in all_p])
-            if "\n" in text:
+            if "\n" in text or is_garbage(text, lang) == True:                
                 text = ""
+            if langid.classify(text)[0] != lang:                
+                text = ""
+#            text = correct_sentence(text, lang) #TODO: uncomment
 #            text = text.replace("%", "pour cent") 
             if len(text.split()) > 3:
                 #TODO: check content spelling
@@ -185,6 +237,12 @@ def get_article_texts(lang, revid_list):
 
 
 def get_user_list(lang, template_name):
+    """
+    returns a list of all wikipedia contributors using the template on their userpage
+    The "lang" parameter specifies the Wikipedia version, e.g. "en".
+    The "template name" specifies the template name, e.g. "Template:CC0"
+    """
+    
     url = "https://{lang}.wikipedia.org/w/api.php".format(lang=lang) 
     user_list = []
     eicontinue = None
@@ -213,7 +271,13 @@ def get_user_list(lang, template_name):
 
 
 def get_added_content(url, revid, lang):
-    
+    """
+    Retrieves all content created by the contributor, except minor edits and derivative works like translations, content mixed with other contributors, or reverts
+    The "url" parameter specifies the API's base url.
+    The "revid" parameter specifies the ID of the revision to check and retrieve.
+    The "lang" parameter specifies the code of the processed language (e.g. "en", "fr", etc.)
+    """
+    #We want to compare the revision to the previous one, to see the content the contributor added (or not)
     compare_query = {"action":"compare",
                      "fromrev":revid,
                      "torelative":"prev",
@@ -269,10 +333,12 @@ def get_added_content(url, revid, lang):
                 text = div.text_content()
                 if "#REDIRECT" in text:  
                     return None
-                try:
-                    #this line checks if there's garbage in wikicode
-#                    text = pypandoc.convert_text(text, to="plain", format="html").replace("\r\n", " ")
-                    #if not, we convert the mediwiki code to html
+                
+                try:       
+                    #TODO: convert scales (1/25000, etc.)
+                    text = pypandoc.convert_text(text, to="plain", format="html").replace("\r\n", " ")
+                    #to avoid removing relevant content in the {{lien}} template (French wikipedia)
+                    text = re.sub(r"{{lien\|([^}]+)}}", r"\1", text)
                     text = pypandoc.convert_text(text, to="html", format="mediawiki").replace("\r\n", " ")
                     #and we retrieve the real plain text
                     #TODO: add cleaning up of (), [], etc.
@@ -295,9 +361,22 @@ def get_added_content(url, revid, lang):
 #                    text = text.replace(" ?%", r" pour cent") 
                     #remove references between brackets
                     text = re.sub(r'\[[0-9]+\]', '', text) #r'\[[0-9]+*\]'
+                    detected_lang = langid.classify(text)[0]
+                    
+                    if  detected_lang != lang:
+                        continue
                     #Transforming numbers in letters
-                    text = filter_numbers(text, lang=lang)
+                    try:
+                        text = filter_numbers(text, lang=lang)
+                    except:
+                        pass
                     text = text.strip()
+                                        
+                        
+                    if is_garbage(text, lang) == True:
+#                        print("garbage:", text)
+                        continue
+#                    text = correct_sentence(text, lang) #TODO: uncomment
                 except:
                     continue #if pandoc cannot convert wikicode, there's a problem, and we don't want to retrieve malformed text
                 if len(text.split()) > 3: #Let's not retrieve too short text
@@ -331,8 +410,17 @@ for user, licence in CC0_user_list:
         if uccontinue != None:
             query["uccontinue"] = uccontinue        
         url = "https://{lang}.wikipedia.org/w/api.php".format(lang=args.lang)
-        r = requests.post(url, data=query)            
-        my_json = r.json()        
+        r = requests.post(url, data=query)      
+        try:
+            my_json = r.json()        
+        except: 
+            try:
+                time.sleep(10)
+                r = requests.post(url, data=query)
+                my_json = r.json()        
+            except:
+                continue
+#            break
         #TODO: exclude reverts
         for contrib in my_json["query"]["usercontribs"]:                    
             if "minor" not in contrib.keys() and ("tags" in contrib.keys() and "mw-new-redirect" not in contrib["tags"] and "contenttranslation" not in contrib["tags"]) and ("comment" in contrib.keys() and "redirect" not in contrib["comment"]):
@@ -347,12 +435,12 @@ for user, licence in CC0_user_list:
                     try:
                         discussion_response = requests.post(url, data=discussion_query).json()["query"]["pages"]
                     except:
-                        print(url, discussion_query)
+                        print("error:", url, discussion_query)
                         time.sleep(10)
                         try:
                             discussion_response = requests.post(url, data=discussion_query).json()["query"]["pages"]
                         except:
-                            print(url, discussion_query)
+                            print("error:", url, discussion_query)
                             continue
                     translation = False
                     translations[discussion_page_title] = False
@@ -399,6 +487,6 @@ for user, licence in CC0_user_list:
         with open(os.path.join(args.output, "_".join([str(user), str(licence)]) + ".txt" ), "wb") as f:
             for sentence in extracted_sentences:
                 f.write(str(sentence + " \n").encode("utf8"))
-    print(user, "contributions retrieved")
+    print(user, "'s contributions retrieved")
 print("Done.")
 
